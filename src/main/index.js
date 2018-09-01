@@ -1,12 +1,12 @@
 'use strict'
 
 import { app, BrowserWindow, screen, Menu } from 'electron'
-const ioHook = require('iohook')
+import ioHook from 'iohook'
+import dgram from 'dgram'
 
 const PORT = 33333
 const HOST = '127.0.0.1'
 
-const dgram = require('dgram')
 const message = Buffer.from('command line\n')
 
 /**
